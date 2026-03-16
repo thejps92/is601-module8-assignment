@@ -48,9 +48,8 @@ jobs:
        run: docker build -t app:test .
      
      - name: Run Trivy vulnerability scanner
-       uses: aquasecurity/trivy-action@0.33.1
+       uses: aquasecurity/trivy-action@master
        with:
-         trivy-version: '0.69.3'
          image-ref: 'app:test'
          format: 'table'
          exit-code: '1'
